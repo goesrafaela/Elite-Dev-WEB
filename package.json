@@ -1,0 +1,13 @@
+{
+    "name": "elite-dev",
+    "private": true,
+    "workspaces": [
+        "apps/*"
+    ],
+    "scripts": {
+        "dev": "npm run dev --workspace=apps/api",
+        "dev:web": "npm run dev --workspace=apps/web",
+        "build": "npm run build --workspace=apps/api && npm run build --workspace=apps/web",
+        "test": "npm run test --workspace=apps/api"
+    }
+}
