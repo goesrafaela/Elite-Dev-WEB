@@ -81,6 +81,16 @@ export function Login() {
        */
       localStorage.setItem("token", token);
 
+      const loggedUser = response.data?.user;
+
+      if (loggedUser?.role === "ORGANIZER") {
+        navigate("/organizador", {
+          replace: true,
+        });
+
+        return;
+      }
+
       /*
        * USUÁRIO RETORNADO PELO LOGIN
        */
